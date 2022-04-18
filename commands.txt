@@ -1,0 +1,33 @@
+# simpleweb repo
+
+docker image build -t devatk11/simpleweb:first-web .
+docker image ls
+docker login
+docker image push devatk11/simpleweb:first-web 
+
+#remove image
+docker image rm devatk11/simpleweb:first-web
+
+# see list of all images
+docker image ls
+
+docker container run -d --name web -p 8000:8080 devatk11/simpleweb:first-web
+
+# see list of all containers
+docker container ls
+
+localhost:8000
+
+# stop container with name web
+docker container stop web
+
+docker container ls -a
+
+# start container with name web
+docker container start web
+
+
+# remove container with name web
+docker container rm web
+
+
